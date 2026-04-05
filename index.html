@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Voting System</title>
+</head>
+<body>
+  <h1>Voting System</h1>
+  <p>Vote your favourite:</p>
+
+  <button onclick="vote('Pizza')">Pizza</button>
+  <button onclick="vote('Burger')">Burger</button>
+
+  <p id="result"></p>
+
+  <script>
+    let votes={Pizza:0,Burger:0};
+
+    function vote(item){
+      votes[item]++;
+      document.getElementById("result").innerHTML="Pizza: "+ votes.Pizza + " | Burer: "+ votes.Burger;
+    }
+  </script>
+</body>
+</html>
